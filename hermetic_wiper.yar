@@ -36,6 +36,6 @@ rule Hermetic_Wiper {
       $op1 = { 8b 7e 08 0f 57 c0 8b 46 0c 83 ef 01 66 0f 13 44 24 20 83 d8 00 89 44 24 18 0f 88 3b 01 00 00 }
       $op2 = { 13 fa 8b 55 f4 4e 3b f3 7f e6 8a 45 0f 01 4d f0 0f 57 c0 }
    condition:
-      ( uint16(0) == 0x5a4d or uint16(0) == 0x5a53 and filesize < 410KB and ( 5 of them )
+      ( uint16(0) == 0x5a4d or uint16(0) == 0x5a53 and filesize < 410KB and ( 8 of them )
       ) or ( all of them )
 }
