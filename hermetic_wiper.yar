@@ -1,7 +1,7 @@
 rule Hermetic_Wiper {
    meta:
       description = "Hermetic_Wiper targeting Ukrain."
-      author = "Joe Wood + op strings from Florian Roth"
+      author = "Joe Wood"
       reference = "Copia.exe and QxSk2n7kna.exe"
       date = "2022-02-24"
       hashA = "0385eeab00e946a302b24a91dea4187c1210597b8e17cd9e2230450f5ece21da"
@@ -33,8 +33,7 @@ rule Hermetic_Wiper {
       $s22 = "9Redmon_d1" fullword wide
       $s23 = "%ws%.2ws" fullword wide
       $s24 = "\\\\?\\C:\\Windows\\System32\\winevt\\Logs" fullword wide
-      $op1 = { 8b 7e 08 0f 57 c0 8b 46 0c 83 ef 01 66 0f 13 44 24 20 83 d8 00 89 44 24 18 0f 88 3b 01 00 00 }
-      $op2 = { 13 fa 8b 55 f4 4e 3b f3 7f e6 8a 45 0f 01 4d f0 0f 57 c0 }
+
    condition:
       ( uint16(0) == 0x5a4d or uint16(0) == 0x5a53 and filesize < 410KB and ( 8 of them )
       ) or ( all of them )
