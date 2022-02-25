@@ -32,7 +32,7 @@ rule Hermetic_Wiper {
       $s21 = "ojectare" fullword ascii
       $s22 = "9Redmon_d1" fullword wide
       $s23 = "%ws%.2ws" fullword wide
-      $s24 "\\\\?\\C:\\Windows\\System32\\winevt\\Logs" fullword wide
+      $s24 = "\\\\?\\C:\\Windows\\System32\\winevt\\Logs" fullword wide
       $op1 = { 8b 7e 08 0f 57 c0 8b 46 0c 83 ef 01 66 0f 13 44 24 20 83 d8 00 89 44 24 18 0f 88 3b 01 00 00 }
       $op2 = { 13 fa 8b 55 f4 4e 3b f3 7f e6 8a 45 0f 01 4d f0 0f 57 c0 }
    condition:
